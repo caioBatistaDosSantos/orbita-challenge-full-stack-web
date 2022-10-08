@@ -1,6 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using students_db.Models;
+using students_db.Request;
 using students_db.Repository;
+// using System;
+// using System.Data;
+// using System.Data.SqlClient;
 
 namespace back_end.Web.Controllers;
 
@@ -15,16 +20,25 @@ public class StudentsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult GetAll()
+    public async Task<ActionResult<List<Student>>> GetAll()
     {
-        var students = _repository.GetAll();
+        // using (SqlConnection connection = new SqlConnection(
+        //                   connectionString))
+        //     {
+        //         SqlCommand command = new SqlCommand(queryString, connection);
+        //         command.Connection.Open();
+        //         command.ExecuteNonQuery();
+        //     }
+        // var constr = "Server=127.0.0.1; Database=students_db; Uid=root; Pwd=123456;";
+        // var conSql = new SqlConnection(constr);
+        var students = await _repository.GetAll();
         return Ok(students);
     }
 
-    [HttpGet("{id}", Name = "GetByPK")]
-    public ActionResult GetByPK(int id)
+    [HttpGet("{ra}", Name = "GetByPK")]
+    public async Task<ActionResult<Student>> GetByPK(int ra)
     {
-        var student = _repository.GetByPK(id);
+        var student = await _repository.GetByPK(ra);
 
         if (student == null) return NotFound("Student not found");
 
@@ -32,29 +46,34 @@ public class StudentsController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult Create(Student student)
+    public async Task<ActionResult> Create(Student student)
     {
-        _repository.Create(student);
+        Console.Write($"studnate: {student}");
+        var validStudent = await _repository.GetByPK(student.RA);
 
-        return CreatedAtAction("GetById", new { student.RA }, student);
+        if (validStudent != null) return BadRequest("Student already registered");
+
+        var newStudent = _repository.Create(student);
+
+        return Ok(newStudent);
     }
 
-    [HttpPut("{id}")]
-    public ActionResult Update(Student student)
+    [HttpPut("{ra}")]
+    public async Task<ActionResult> Update(int ra, StudentRequest request)
     {
-        var validStudent = _repository.GetByPK(student.RA);
+        var validStudent = await _repository.GetByPK(ra);
 
         if (validStudent == null) return NotFound("Student not found");
 
-        _repository.Update(student);
+        _repository.Update(ra, request);
 
-        return Ok($"Student '{student.RA}' updated");
+        return Ok($"Student '{ra}' updated");
     }
 
-    [HttpDelete("{id}")]
-    public ActionResult Delete(int ra)
+    [HttpDelete("{ra}")]
+    public async Task<ActionResult> Delete(int ra)
     {
-        var validStudent = _repository.GetByPK(ra);
+        var validStudent = await _repository.GetByPK(ra);
 
         if (validStudent == null) return NotFound("Student not found");
 
