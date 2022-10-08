@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<StudentsContext>(options => 
 {
     options.UseMySql(
-                @"Server=127.0.0.1; Database=students_db; Uid=root; Pwd=123456;",
+                @"Server=database; Database=students_db; Uid=root; Pwd=123456;",
                 new MySqlServerVersion(new Version(8, 0, 11))
                 // new MySqlServerVersion(new Version(8, 0, 11))
                 // Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.25-mysql")

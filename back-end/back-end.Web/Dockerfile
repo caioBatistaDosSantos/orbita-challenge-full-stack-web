@@ -2,6 +2,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0-focal AS base
 WORKDIR /app
 EXPOSE 3001
 
+ENV DOTNET_CONNECTION_STRING="Server=db; Database=students_db; Uid=root; Pwd=123456;"
 ENV ASPNETCORE_URLS=http://+:3001
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder

@@ -24,7 +24,7 @@ public class StudentsContext : DbContext
     {
     if (!optionsBuilder.IsConfigured)
         {
-            var connectionString = Environment.GetEnvironmentVariable("DOTNET_CONNECTION_STRING");
+            var connectionString = Environment.GetEnvironmentVariable(@"Server=localhost; Database=students_db; Uid=root; Pwd=123456;");
 
             optionsBuilder.UseMySql(
                 connectionString,

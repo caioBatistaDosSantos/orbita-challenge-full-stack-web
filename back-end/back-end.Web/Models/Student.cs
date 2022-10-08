@@ -13,7 +13,6 @@ public class Student
     [RegularExpression(".+\\@.+\\..+",ErrorMessage = "Email must be in a valid format")]
     public string Email { get; set; }
     [Required(ErrorMessage="Required field")]
-    [Range(11, int.MinValue, ErrorMessage = "CPF must be in a valid format")]
-    public int CPF { get; set; }
+    public long CPF { get; set; }
 
 }

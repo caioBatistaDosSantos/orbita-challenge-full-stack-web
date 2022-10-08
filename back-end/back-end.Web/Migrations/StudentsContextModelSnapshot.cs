@@ -24,8 +24,8 @@ namespace back_end.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("CPF")
-                        .HasColumnType("int");
+                    b.Property<long>("CPF")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Email")
                         .IsRequired()
