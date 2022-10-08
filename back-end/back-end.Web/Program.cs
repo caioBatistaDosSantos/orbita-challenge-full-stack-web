@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<StudentsContext>(options => 
 {
     options.UseMySql(
-        @"Server=database; Database=students_db; Uid=root; Pwd=123456;",
+        @"Server=localhost; Database=students_db; Uid=root; Pwd=123456;",
         new MySqlServerVersion(new Version(8, 0, 11))
     );
 });
