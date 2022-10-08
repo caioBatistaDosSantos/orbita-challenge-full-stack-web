@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using students_db.Models;
-using System.Threading.Tasks;
+using students_db.Request;
+using System.Threading;
 
 namespace students_db.Repository;
 
@@ -12,14 +13,14 @@ public class StudentsRepository
         _context = context;
     }
 
-    public async List<Student?> GetAll()
+    public async Task<List<Student>> GetAll()
     {
         return await _context.Students.ToListAsync();
     }
 
-    public Student GetByPK(int ra)
+    public async Task<Student> GetByPK(int ra)
     {
-        return _context.Students.Where(e => e.RA == ra).First();
+        return await _context.Students.FindAsync(ra);
     }
 
     public Student Create(Student student)
@@ -29,9 +30,13 @@ public class StudentsRepository
         return student;
     }
 
-    public virtual void Update(Student student)
+    public async virtual void Update(int ra, StudentRequest request)
     {
-        _context.Update(student);
+        var student = await GetByPK(ra);
+
+        student.Name = request.Name;
+        student.Email = request.Email;
+
         _context.SaveChanges();
     }
 
