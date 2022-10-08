@@ -17,6 +17,7 @@ builder.Services.AddScoped<StudentsRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddCors();
 
 var app = builder.Build();
@@ -35,6 +36,13 @@ if (app.Environment.IsDevelopment())
 // }
 
 app.UseHttpsRedirection();
+
+app.UseCors(c =>
+{
+    c.AllowAnyHeader();
+    c.AllowAnyMethod();
+    c.AllowAnyOrigin();
+});
 
 app.UseAuthorization();
 
