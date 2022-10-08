@@ -1,6 +1,5 @@
 <template>
-  <v-app id="inspire">
-
+  <div>
     <v-navigation-drawer
       v-model="drawer"
       app
@@ -37,10 +36,9 @@
     </v-navigation-drawer>
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
       <v-toolbar-title>{{ titleView }}</v-toolbar-title>
     </v-app-bar>
-  </v-app>
+  </div>
 </template>
 
 <script>
