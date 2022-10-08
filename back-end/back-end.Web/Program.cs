@@ -4,27 +4,22 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-// builder.Services.AddScoped<StudentsRepository>();
 builder.Services.AddControllers();
+
 builder.Services.AddDbContext<StudentsContext>(options => 
 {
     options.UseMySql(
-                @"Server=database; Database=students_db; Uid=root; Pwd=123456;",
-                new MySqlServerVersion(new Version(8, 0, 11))
-                // new MySqlServerVersion(new Version(8, 0, 11))
-                // Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.25-mysql")
-            );
+        @"Server=database; Database=students_db; Uid=root; Pwd=123456;",
+        new MySqlServerVersion(new Version(8, 0, 11))
+    );
 });
 builder.Services.AddScoped<StudentsRepository>();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -35,14 +30,8 @@ using(var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<StudentsContext>();
     context.Database.EnsureDeleted();
-    context.Database.EnsureCreated();  
-    // use context
+    context.Database.EnsureCreated();
 }
-
-// StudentsContext context = new();
-
-// context.Database.EnsureDeleted();
-// context.Database.EnsureCreated();
 
 app.UseHttpsRedirection();
 

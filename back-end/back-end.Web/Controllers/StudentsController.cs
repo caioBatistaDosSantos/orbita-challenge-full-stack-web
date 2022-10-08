@@ -3,9 +3,6 @@ using System.Threading.Tasks;
 using students_db.Models;
 using students_db.Request;
 using students_db.Repository;
-// using System;
-// using System.Data;
-// using System.Data.SqlClient;
 
 namespace back_end.Web.Controllers;
 
@@ -22,16 +19,8 @@ public class StudentsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<Student>>> GetAll()
     {
-        // using (SqlConnection connection = new SqlConnection(
-        //                   connectionString))
-        //     {
-        //         SqlCommand command = new SqlCommand(queryString, connection);
-        //         command.Connection.Open();
-        //         command.ExecuteNonQuery();
-        //     }
-        // var constr = "Server=127.0.0.1; Database=students_db; Uid=root; Pwd=123456;";
-        // var conSql = new SqlConnection(constr);
         var students = await _repository.GetAll();
+
         return Ok(students);
     }
 
@@ -48,7 +37,6 @@ public class StudentsController : ControllerBase
     [HttpPost]
     public async Task<ActionResult> Create(Student student)
     {
-        Console.Write($"studnate: {student}");
         var validStudent = await _repository.GetByPK(student.RA);
 
         if (validStudent != null) return BadRequest("Student already registered");
