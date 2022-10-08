@@ -7,9 +7,9 @@ public class StudentsContext : DbContext
 {
     public DbSet<Student> Students { get; set; }
 
-    // public StudentsContext(DbContextOptions<StudentsContext> options)
-    // : base(options)
-    // {}
+    public StudentsContext(DbContextOptions<StudentsContext> options)
+    : base(options)
+    {}
     // public void ConfigureServices(IServiceCollection services)
     // {
     //     var connection = Environment.GetEnvironmentVariable("ConexaoMySql:MySqlConnectionString");
@@ -28,8 +28,15 @@ public class StudentsContext : DbContext
 
             optionsBuilder.UseMySql(
                 connectionString,
-                new MySqlServerVersion(new Version(8, 0, 11))
+                new MySqlServerVersion(new Version(8, 0, 11)),
+                options => options.EnableRetryOnFailure()
             );
+
+            // optionsBuilder.UseMySql(
+            //     @"Server=127.0.0.1; Database=students_db; Uid=root; Pwd=123456;",
+            //     new MySqlServerVersion(new Version(8, 0, 11)),
+            //     options => options.EnableRetryOnFailure()
+            // );
         }
     }
 
