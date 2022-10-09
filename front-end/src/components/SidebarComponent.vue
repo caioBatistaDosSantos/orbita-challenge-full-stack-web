@@ -12,9 +12,9 @@
           class="mb-4"
           color="grey darken-1"
           size="64"
-        ></v-avatar>
+        >+A</v-avatar>
 
-        <div>john@vuetifyjs.com</div>
+        <div>maisa@educa.com</div>
       </v-sheet>
       <v-divider></v-divider>
       <v-list>
@@ -24,10 +24,6 @@
           :to="link"
           link
         >
-          <!-- colocar icones aqui -->
-          <!-- <v-list-item-icon>
-            <v-icon>{{ icon }}</v-icon>
-          </v-list-item-icon> -->
           <v-list-item-content>
             <v-list-item-title>{{ text }}</v-list-item-title>
           </v-list-item-content>
@@ -51,7 +47,6 @@
       drawer: null,
       links: [
         ['/', 'Consulta de Alunos'],
-        ['/create', 'Cadastrar Aluno'],
       ],
     }),
   }
