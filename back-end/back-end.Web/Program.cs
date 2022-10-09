@@ -1,18 +1,48 @@
 using students_db.Repository;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<StudentsContext>(options => 
+// builder.Services.AddDbContext<StudentsContext>(options => 
+// {
+//     options.UseMySql(options =>
+//         string connectionString = @"Server=db; Database=students_db; Uid=root; Pwd=123456;",
+//         // mySqlOptions =>
+//         // {
+//         //     mySqlOptions.ServerVersion(new Version(5, 7, 17), ServerType.MySql)
+//         //     .EnableRetryOnFailure(
+//         //     maxRetryCount: 10,
+//         //     maxRetryDelay: TimeSpan.FromSeconds(30),
+//         //     errorNumbersToAdd: null); 
+//         // }
+//         options.UseMySql(connectionString,
+//         ServerVersion.AutoDetect(connectionString),
+//         mySqlOptions =>
+//             mySqlOptions.EnableRetryOnFailure(
+//                 maxRetryCount: 10,
+//                 maxRetryDelay: TimeSpan.FromSeconds(30),
+//                 errorNumbersToAdd: null);
+//         );
+//     );
+// });
+
+builder.Services.AddDbContext<StudentsContext>(options =>
 {
-    options.UseMySql(
-        @"Server=localhost; Database=students_db; Uid=root; Pwd=123456;",
-        new MySqlServerVersion(new Version(8, 0, 11))
-    );
+    string connectionString = @"Server=db; Database=students_db; Uid=root; Pwd=123456;";
+    options.UseMySql(connectionString,
+        ServerVersion.AutoDetect(connectionString),
+        mySqlOptions =>
+            mySqlOptions.EnableRetryOnFailure(
+                maxRetryCount: 10,
+                maxRetryDelay: TimeSpan.FromSeconds(30),
+                errorNumbersToAdd: null)
+        );
 });
+
 builder.Services.AddScoped<StudentsRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
