@@ -1,5 +1,12 @@
 <template>
   <div>
+    <section>
+      <v-text-field
+          v-model="search"
+          label="Faça sua busca"
+          class="mx-4"
+      ></v-text-field>
+      <DialogComponent />
       <v-data-table
         :headers="headers"
         :items="students"
@@ -7,17 +14,20 @@
         class="elevation-1"
         :search="search"
       ></v-data-table>
+    </section>
     <SidebarComponent titleView="Consulta de Alunos"/>
     </div>
 </template>
 
 <script>
   import SidebarComponent from '../components/SidebarComponent.vue'
+  import DialogComponent from '../components/DialogComponent.vue'
   import { GetAll } from '../services/requestApi'
 
   export default {
     components: {
       SidebarComponent,
+      DialogComponent,
     },
     async mounted() {
       try {
@@ -38,6 +48,9 @@
       } catch (error) {
         console.log(error);
       }
+    },
+    update() {
+      console.log('atualizando')
     },
     data () {
       return {
