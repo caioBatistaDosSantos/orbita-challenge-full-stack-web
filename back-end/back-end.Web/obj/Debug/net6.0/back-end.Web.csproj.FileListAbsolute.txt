@@ -330,3 +330,9 @@
 /Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/obj/Debug/net6.0/back-end.Web.pdb
 /Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/obj/Debug/net6.0/back-end.Web.genruntimeconfig.cache
 /Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/obj/Debug/net6.0/ref/back-end.Web.dll
+/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/bin/Debug/net6.0/System.Web.Cors.dll
+/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/bin/Debug/net6.0/System.Net.Http.Formatting.dll
+/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/bin/Debug/net6.0/System.Web.Http.dll
+/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/bin/Debug/net6.0/System.Web.Http.Cors.dll
+/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
