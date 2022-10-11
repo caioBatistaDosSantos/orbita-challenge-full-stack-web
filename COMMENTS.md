@@ -26,8 +26,8 @@ Os <strong>frameworks</strong> utilizados em conjunto com o .NET foram:
 
 <strong>TESTES INTEGRADOS</strong>:
 
-  Para os testes foi criado um segundo projeto, como é o padrão do .NET e está localizado em `/orbita-challenge-full-stack-web/back-end/back-end.Test`.
-  As tecnologias utilizadas para o desenvolvimento foram:
+Para os testes foi criado um segundo projeto, como é o padrão do .NET e está localizado em `/orbita-challenge-full-stack-web/back-end/back-end.Test`.
+As tecnologias utilizadas para o desenvolvimento foram:
     - `xUnit`: para criar e desenvolver o projeto de teste
     - `FluentAssertions`: para dar mais legibilidade no desenvolvimento do teste
     - `EntityFrameworkCore InMemory`: para realizar o *"mock"* do banco de dados MySQL, armazenando os dados na memória de sua máquina
