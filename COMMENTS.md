@@ -1,5 +1,5 @@
 # Boas vindas ao projeto Orbita Challenge Full Stack Web
-API e Aplicação que realiza um CRUD, desenvolvidos com `.NET C#` e `Vue.js`.
+API e Aplicação que realizam um CRUD, desenvolvidos com `.NET C#` e `Vue.js`.
 API coberta por testes integrados desenvolvidos com `xUnit` e `FluentAssertions`.
 
 ---
@@ -38,8 +38,8 @@ As tecnologias utilizadas para o desenvolvimento foram:
 O Front-end é uma aplicação `Vue` e foi essencialmente desenvolvido com o `Vuetify`. Como foi meu primeiro projeto utilizando essas ferramentas, decidi desenvolver reutilizando os componentes de *"forms"* da documentação.
 
 Os <strong>frameworks</strong> utilizados foram:
-  - `Vuelidate`: para validar os campos dos *inputs*
-  - `Axios`: para solicitar as requisições ao back-end
+ - `Vuelidate`: para validar os campos dos *inputs*
+ - `Axios`: para solicitar as requisições ao back-end
 
 ### Outras tecnologias:
 
