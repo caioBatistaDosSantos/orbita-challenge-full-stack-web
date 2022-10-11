@@ -1,5 +1,5 @@
 # Boas vindas ao projeto Orbita Challenge Full Stack Web
-API e Aplicação que raliza um CRUD desenvolvidos com `.NET C#` e `Vue.js`.
+API e Aplicação que realiza um CRUD, desenvolvidos com `.NET C#` e `Vue.js`.
 API coberta por testes integrados desenvolvidos com `xUnit` e `FluentAssertions`.
 
 ---
