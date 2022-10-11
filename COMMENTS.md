@@ -1,23 +1,23 @@
 # Boas vindas ao projeto Orbita Challenge Full Stack Web
 API e Aplicação que raliza um CRUD desenvolvidos com `.NET C#` e `Vue.js`.
-API coberta por testes integrados desenvolvidos com `xUnit` e `Entity Framework`.
+API coberta por testes integrados desenvolvidos com `xUnit` e `FluentAssertions`.
 
 ---
 
 ## O que foi desenvolvido:
 
-  - Esta aplicação surgiu para suprir a nescessidade de cadastrar uma pessoa estudente em um banco de dados para realizar um cadastro da mesma, desafios propostos pelo README do projeto.
+  - Esta aplicação surgiu para suprir a nescessidade de cadastrar uma pessoa estudante em um banco de dados para realizar um cadastro da mesma, desafios propostos pelo README do projeto.
 
 ---
 
-## Sobre a aplicação (arquitetura e técnologias):
+## Sobre a aplicação (arquitetura e tecnologias):
 
 Este repositório contêm um banco de dados `MySQL`, o `backend` e `frontend` da aplicação desenvolvidos com as seguintes tecnologias:
 
 ### Back-end:
 
-Localizado em `/orbita-challenge-full-stack-web/back-end/back-end.Web`, o back-end segue conceito de <strong>API RESTfull</strong>. Desenvolvido com `C# .NET`, com a arquitetura MVC - "Model-View-Controller" (nesta aplicação o papel de "View" está sendo desenpenhado pelo front-end).
-  - Dentro da pasta `/Repository` foram desenvolvidos os arquivo de contexto e repositório que configuram e acessam o banco de daods.
+Localizado em `/orbita-challenge-full-stack-web/back-end/back-end.Web`, o back-end segue o conceito de <strong>API RESTfull</strong>. Desenvolvido com `C# .NET`, com a arquitetura MVC - "Model-View-Controller" (nesta aplicação o papel de "View" está sendo desenpenhado pelo front-end).
+  - Dentro da pasta `/Repository` foram desenvolvidos os arquivos de contexto e repositório que configuram e acessam o banco de dados.
   - Na pasta `/Controllers` contém a lógica da requisição da API e regras de negócio
 
 Os <strong>frameworks</strong> utilizados em conjunto com o .NET foram:
@@ -26,8 +26,8 @@ Os <strong>frameworks</strong> utilizados em conjunto com o .NET foram:
 
 <strong>TESTES INTEGRADOS</strong>:
 
-  Para o testes foi criado um segundo projeto, como é o padrão do .NET e está localizado em `/orbita-challenge-full-stack-web/back-end/back-end.Test`.
-  As teconologias utilizadas para o desenvolvimento foram:
+  Para os testes foi criado um segundo projeto, como é o padrão do .NET e está localizado em `/orbita-challenge-full-stack-web/back-end/back-end.Test`.
+  As tecnologias utilizadas para o desenvolvimento foram:
     - `xUnit`: para criar e desenvolver o projeto de teste
     - `FluentAssertions`: para dar mais legibilidade no desenvolvimento do teste
     - `EntityFrameworkCore InMemory`: para realizar o *"mock"* do banco de dados MySQL, armazenando os dados na memória de sua máquina
@@ -35,9 +35,9 @@ Os <strong>frameworks</strong> utilizados em conjunto com o .NET foram:
 
 ### Front-end:
 
-O Front-end é uma aplicação `Vue` e foi esencialmente desenvolvido com o `Vuetify`. Como foi meu primeiro projeto utilizando essas ferramentas, decidi desenvolvedor reutilizando os coponentes de CRUD da documentação.
+O Front-end é uma aplicação `Vue` e foi essencialmente desenvolvido com o `Vuetify`. Como foi meu primeiro projeto utilizando essas ferramentas, decidi desenvolver reutilizando os componentes de *"forms"* da documentação.
 
-Os <strong>frameworks</strong> utilizados em conjunto foram:
+Os <strong>frameworks</strong> utilizados foram:
   - `Vuelidate`: para validar os campos dos *inputs*
   - `Axios`: para solicitar as requisições ao back-end
 
@@ -61,14 +61,14 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
 2. Suba o container com o comando:
   - `docker-compose up -d --build`
 
-- Apos o este passo a aplicação já vai estar rodando dentro do container e você pode testá-la nas seguintes URLs:
+- Apos este passo a aplicação já vai estar rodando dentro do container e você pode utilizá-la nas seguintes URLs:
   - http://localhost:8080 => Aplicação Vue
   - http://localhost:3001/Students => API
 
 ---
 
 ## Locamente:
-  - Para rodar o projeto localmente você vai precisar ter instalado o GitHub, .NET, Node, ter uma instáncia de um banco de dados MySQL e basta seguir o passo a passo abaixo:
+  - Para rodar o projeto localmente você vai precisar ter instalado o GitHub, .NET, Node, ter um banco de dados MySQL e basta seguir o passo a passo abaixo:
 
 1. Clone o repositório com o comando:
   - `git@github.com:caioBatistaDosSantos/orbita-challenge-full-stack-web.git`;
@@ -85,13 +85,13 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
   - `cd front-end`
 7. Instale as dependências:
   - `npm install`
-8. Inicie a aplicação:
+8. Inicie a aplicação fron-end:
   - `npm run serve`
 
-- Apos o este passo a aplicação já vai estar rodando localmente e você pode testá-la nas seguintes URLs:
+- Apos este passo a aplicação já vai estar rodando localmente e você pode utilizá-la nas seguintes URLs:
   - http://localhost:8080 => Aplicação Vue
   - http://localhost:3001/Students => API
-  - https://localhost:3000/swagger => Documentação no swagger
+  - https://localhost:3000/swagger => Documentação com o swagger
 
 ---
 
@@ -103,8 +103,8 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
 ## Possíveis melhorias:
 
 Se tivesse mais tempo, gostaria de ralizar as seguistes melhorias:
-  - <strong>Refatorar o código do Back-end para respeitar os princípios do SOLID</strong>: facilitando a escabilidade do projeto e manutenção.
+  - <strong>Refatorar o código do Back-end para respeitar os princípios do SOLID</strong>: facilitando a escalabilidade do projeto e manutenção.
   - <strong>Utilizar o Vuex</strong>: cheguei a instalar e configurar essa biblioteca para gerenciar o estado da aplicação front-end, entretanto ainda não consegui utiliza-la nos componentes. Gostaria de usar essa ferramenta, pois assim poderiam componentizar o meu arquivo `StudentsView.vue` e diminuir a complexidade do meu código.
-  - <strong>Realizar os teste do front-end</strong>: os testes do front-end estão em produção, mas por ser a primeira vez utilizando o Vue estou com algumas dificuldade para configurar o ambiente de testes e renderizar os coponentes, mas é uma coisa que pretendo implementar.
+  - <strong>Realizar os teste do front-end</strong>: os testes do front-end estão em produção, mas por ser a primeira vez utilizando o Vue estou com algumas dificuldades para configurar o ambiente de testes e renderizar os componentes, mas pretendo implementar.
 
 # Feedback são bem-vindos!!
