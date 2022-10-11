@@ -104,7 +104,7 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
 
 Se tivesse mais tempo, gostaria de ralizar as seguistes melhorias:
   - <strong>Refatorar o código do Back-end para respeitar os princípios do SOLID</strong>: facilitando a escalabilidade do projeto e manutenção.
-  - <strong>Utilizar o Vuex</strong>: cheguei a instalar e configurar essa biblioteca para gerenciar o estado da aplicação front-end, entretanto ainda não consegui utiliza-la nos componentes. Gostaria de usar essa ferramenta, pois assim poderiam componentizar o meu arquivo `StudentsView.vue` e diminuir a complexidade do meu código.
-  - <strong>Realizar os teste do front-end</strong>: os testes do front-end estão em produção, mas por ser a primeira vez utilizando o Vue estou com algumas dificuldades para configurar o ambiente de testes e renderizar os componentes, mas pretendo implementar.
+  - <strong>Utilizar o Vuex</strong>: cheguei a instalar e configurar essa biblioteca para gerenciar o estado da aplicação front-end, entretanto ainda não consegui utiliza-la nos componentes. Gostaria de usar essa ferramenta, pois assim poderia componentizar o meu arquivo `StudentsView.vue` e diminuir a complexidade do meu código.
+  - <strong>Realizar os teste do front-end</strong>: os testes do front-end estão em produção, mas por ser a primeira vez utilizando o Vue estou com algumas dificuldades para configurar o ambiente de testes e renderizar os componentes.
 
 # Feedback são bem-vindos!!
