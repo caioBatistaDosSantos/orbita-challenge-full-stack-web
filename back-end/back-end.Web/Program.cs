@@ -7,29 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// builder.Services.AddDbContext<StudentsContext>(options => 
-// {
-//     options.UseMySql(options =>
-//         string connectionString = @"Server=db; Database=students_db; Uid=root; Pwd=123456;",
-//         // mySqlOptions =>
-//         // {
-//         //     mySqlOptions.ServerVersion(new Version(5, 7, 17), ServerType.MySql)
-//         //     .EnableRetryOnFailure(
-//         //     maxRetryCount: 10,
-//         //     maxRetryDelay: TimeSpan.FromSeconds(30),
-//         //     errorNumbersToAdd: null); 
-//         // }
-//         options.UseMySql(connectionString,
-//         ServerVersion.AutoDetect(connectionString),
-//         mySqlOptions =>
-//             mySqlOptions.EnableRetryOnFailure(
-//                 maxRetryCount: 10,
-//                 maxRetryDelay: TimeSpan.FromSeconds(30),
-//                 errorNumbersToAdd: null);
-//         );
-//     );
-// });
-
 builder.Services.AddDbContext<StudentsContext>(options =>
 {
     string connectionString = @"Server=db; Database=students_db; Uid=root; Pwd=123456;";
