@@ -6,7 +6,7 @@ API coberta por testes integrados desenvolvidos com `xUnit` e `FluentAssertions`
 
 ## O que foi desenvolvido:
 
-  - Esta aplicação surgiu para suprir a nescessidade de cadastrar uma pessoa estudante em um banco de dados para realizar um cadastro da mesma, desafios propostos pelo README do projeto.
+  - Esta aplicação surgiu para suprir a nescessidade de cadastrar uma pessoa estudante em um banco de dados e realizar um cadastro da mesma, desafios propostos pelo README do projeto.
 
 ---
 
