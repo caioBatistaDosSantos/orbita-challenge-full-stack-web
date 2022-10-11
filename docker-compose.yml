@@ -8,8 +8,9 @@ services:
     working_dir: /app-frontend
     volumes:
       - ./front-end/src:/app-frontend/src
+    restart: 'always'
     depends_on:
-      backend:
+      db:
         condition: service_healthy
     healthcheck:
       test: ['CMD', 'lsof', '-t', '-i:8080']
@@ -24,14 +25,15 @@ services:
       - 3001:3001
       - 3002:3002
     depends_on:
-      db:
+      frontend:
         condition: service_healthy
+    restart: 'always'
     environment:
       - DOTNET_CONNECTION_STRING:@"Server=db; Database=students_db; Uid=root; Password=123456;"
     healthcheck:
       test: ['CMD', 'lsof', '-t', '-i:3001']
-      timeout: 10s
-      retries: 5
+      timeout: 30s
+      retries: 15
   db:
     image: mysql:8.0.21
     container_name: db
@@ -43,7 +45,7 @@ services:
     restart: 'always'
     healthcheck:
       test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
-      timeout: 10s
-      retries: 5
+      timeout: 120s
+      retries: 40
     cap_add:
       - SYS_NICE
