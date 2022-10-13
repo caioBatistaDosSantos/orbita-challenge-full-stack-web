@@ -12,7 +12,7 @@ API coberta por testes integrados desenvolvidos com `xUnit` e `FluentAssertions`
 
 ## Sobre a aplicação (arquitetura e tecnologias):
 
-Este repositório contêm um banco de dados `MySQL`, o `backend` e `frontend` da aplicação desenvolvidos com as seguintes tecnologias:
+Este repositório contém um banco de dados `MySQL`, o `backend` e `frontend` da aplicação desenvolvidos com as seguintes tecnologias:
 
 ### Back-end:
 
