@@ -109,3 +109,8 @@ Se tivesse mais tempo, gostaria de ralizar as seguistes melhorias:
   - <strong>Realizar os teste do front-end</strong>: os testes do front-end estão em produção, mas por ser a primeira vez utilizando o Vue estou com algumas dificuldades para configurar o ambiente de testes e renderizar os componentes.
 
 # Feedback são bem-vindos!!
+
+- Se possível, deixe seu feedback ou seu code-review! Muito Obrigado! :)🤝🛠
+
+- Linkedin: https://www.linkedin.com/in/caio-batista-dos-santos/
+- Gmail: drcaiosan@gmail.com
