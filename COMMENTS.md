@@ -62,7 +62,7 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
 2. Suba o container com o comando:
   - `docker-compose up -d --build`
 
-- Apos este passo a aplicação já vai estar rodando dentro do container e você pode utilizá-la nas seguintes URLs:
+- Após este passo a aplicação já vai estar rodando dentro do container e você pode utilizá-la nas seguintes URLs:
   - http://localhost:8080 => Aplicação Vue
   - http://localhost:3001/Students => API
 
