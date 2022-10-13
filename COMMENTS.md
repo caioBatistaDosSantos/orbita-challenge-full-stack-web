@@ -19,7 +19,7 @@ Este repositório contêm um banco de dados `MySQL`, o `backend` e `frontend` da
 Localizado em `/orbita-challenge-full-stack-web/back-end/back-end.Web`, o back-end segue o conceito de <strong>API RESTfull</strong>. Desenvolvido com `C# .NET`, com a arquitetura de uma API Web.
   - Dentro da pasta `/Repository` foram desenvolvidos os arquivos de contexto e repositório que configuram e acessam o banco de dados.
   - Na pasta `/Controllers` contém a lógica da requisição da API e regras de negócio
-  - Na pasta `/Models` está a minha classe StudentsModel que mapeia a minha models *students*
+  - Na pasta `/Models` está a minha classe StudentsModel que mapeia a minha entidade *students*
 
 Os <strong>frameworks</strong> utilizados em conjunto com o .NET foram:
   - `ASP.NET CORE`: para facilitar na criação e densenvolvimento da API
