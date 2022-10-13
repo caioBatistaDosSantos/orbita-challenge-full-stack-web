@@ -62,13 +62,13 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
 2. Suba o container com o comando:
   - `docker-compose up -d --build`
 
-- Após este passo a aplicação já vai estar rodando dentro do container e você pode utilizá-la nas seguintes URLs:
+- Após este passo a aplicação já estará rodando dentro do container e você pode utilizá-la nas seguintes URLs:
   - http://localhost:8080 => Aplicação Vue
   - http://localhost:3001/Students => API
 
 ---
 
-## Locamente:
+## Localmente:
   - Para rodar o projeto localmente você vai precisar ter instalado o GitHub, .NET, Node, ter um banco de dados MySQL e basta seguir o passo a passo abaixo:
 
 1. Clone o repositório com o comando:
@@ -77,7 +77,7 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
       - `cd orbita-challenge-full-stack-web`
 2. Entre na pasta do back-end:
   - `cd back-end/back-end.Web`
-3. Altere a string de conecção que se encontra no arquivo `Program.cs` e `/Repository/StudentsRepository.cs` com os dados do seu banco de dados local.
+3. Altere a string de conexão que se encontra no arquivo `Program.cs` e `/Repository/StudentsRepository.cs` com os dados do seu banco de dados local.
 4. Instale as dependências:
   - `dotnet restore`
 5. Inicie a aplicação back-end:
@@ -89,7 +89,7 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
 8. Inicie a aplicação fron-end:
   - `npm run serve`
 
-- Apos este passo a aplicação já vai estar rodando localmente e você pode utilizá-la nas seguintes URLs:
+- Após este passo a aplicação já estará rodando localmente e você pode utilizá-la nas seguintes URLs:
   - http://localhost:8080 => Aplicação Vue
   - http://localhost:3001/Students => API
   - https://localhost:3000/swagger => Documentação com o swagger
@@ -105,7 +105,7 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
 
 Se tivesse mais tempo, gostaria de ralizar as seguistes melhorias:
   - <strong>Refatorar o código do Back-end para respeitar os princípios do SOLID</strong>: facilitando a escalabilidade do projeto e manutenção.
-  - <strong>Utilizar o Vuex</strong>: cheguei a instalar e configurar essa biblioteca para gerenciar o estado da aplicação front-end, entretanto ainda não consegui utiliza-la nos componentes. Gostaria de usar essa ferramenta, pois assim poderia componentizar o meu arquivo `StudentsView.vue` e diminuir a complexidade do meu código.
+  - <strong>Utilizar o Vuex</strong>: cheguei a instalar e configurar essa biblioteca para gerenciar o estado da aplicação front-end, entretanto ainda não consegui utilizá-la nos componentes. Gostaria de usar essa ferramenta, pois assim poderia componentizar o meu arquivo `StudentsView.vue` e diminuir a complexidade do meu código.
   - <strong>Realizar os teste do front-end</strong>: os testes do front-end estão em produção, mas por ser a primeira vez utilizando o Vue estou com algumas dificuldades para configurar o ambiente de testes e renderizar os componentes.
 
 # Feedback são bem-vindos!!
