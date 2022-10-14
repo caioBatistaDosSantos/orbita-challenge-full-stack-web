@@ -56,7 +56,7 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
   - Para rodar o projeto com o `Docker` você vai precisar ter instalado o GitHub, Docker e docker-compose e basta seguir o passo a passo abaixo:
 
 1. Clone o repositório com o comando:
-  - `git@github.com:caioBatistaDosSantos/orbita-challenge-full-stack-web.git`;
+  - `git clone git@github.com:caioBatistaDosSantos/orbita-challenge-full-stack-web.git`;
     - Entre na pasta do repositório:
       - `cd orbita-challenge-full-stack-web`
 2. Suba o container com o comando:
@@ -72,7 +72,7 @@ Utilizei o `Docker` para versionar o projeto e o `docker-compose` para conteiniz
   - Para rodar o projeto localmente você vai precisar ter instalado o GitHub, .NET, Node, ter um banco de dados MySQL e basta seguir o passo a passo abaixo:
 
 1. Clone o repositório com o comando:
-  - `git@github.com:caioBatistaDosSantos/orbita-challenge-full-stack-web.git`;
+  - `git clone git@github.com:caioBatistaDosSantos/orbita-challenge-full-stack-web.git`;
     - Entre na pasta do repositório:
       - `cd orbita-challenge-full-stack-web`
 2. Entre na pasta do back-end:
