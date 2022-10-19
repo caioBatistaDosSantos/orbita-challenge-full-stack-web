@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj": {}
+    "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj": {}
   },
   "projects": {
-    "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj": {
+    "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj",
+        "projectUniqueName": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj",
         "projectName": "back-end.Test",
-        "projectPath": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj",
+        "projectPath": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj",
         "packagesPath": "/Users/macbook/.nuget/packages/",
-        "outputPath": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Test/obj/",
+        "outputPath": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/macbook/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj": {
-                "projectPath": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj"
+              "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj": {
+                "projectPath": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj"
               }
             }
           }
@@ -98,14 +98,14 @@
         }
       }
     },
-    "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj": {
+    "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj",
+        "projectUniqueName": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj",
         "projectName": "back-end.Web",
-        "projectPath": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj",
+        "projectPath": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj",
         "packagesPath": "/Users/macbook/.nuget/packages/",
-        "outputPath": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/obj/",
+        "outputPath": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/macbook/.nuget/NuGet/NuGet.Config"

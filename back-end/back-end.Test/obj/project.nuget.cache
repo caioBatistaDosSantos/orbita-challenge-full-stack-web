@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fpwVFj9OF5IibkbisWdZSU3ISvrYB6ItbStKbGAJ4drQSHM8JTI8oBsrlaReZmdf0+wvVOokO2farxhmoHpbLQ==",
+  "dgSpecHash": "nmlIeQ5KTMJl0My1P+MY+vep0TYxNQZ+/U3dqUruA3kg2H09oyJYWmnzZihuNEyRj12cIplnZkcFTN4k6lSKsw==",
   "success": true,
-  "projectFilePath": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj",
+  "projectFilePath": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Test/back-end.Test.csproj",
   "expectedPackageFiles": [
     "/Users/macbook/.nuget/packages/autobogus/2.13.1/autobogus.2.13.1.nupkg.sha512",
     "/Users/macbook/.nuget/packages/bogus/31.0.3/bogus.31.0.3.nupkg.sha512",

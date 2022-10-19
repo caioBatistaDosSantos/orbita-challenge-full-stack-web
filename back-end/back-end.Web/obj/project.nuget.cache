@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c9XN+fy4kF/HU5rrKJ1aMCaKVTupGQNb+barXAzlewLmz3dB11d6iHtDeFuyQCaWo5adBrN6uO3B/0IoQVjOfA==",
+  "dgSpecHash": "dBd1WrvyYlbQcq3k2INgYQpEtGOHs2OozHYkjrZONk0V1/ZzU2bGWRgoUWj4loKTtFvSOkidDLdMshUbDltPjg==",
   "success": true,
-  "projectFilePath": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj",
+  "projectFilePath": "/Users/macbook/my-projrct/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj",
   "expectedPackageFiles": [
     "/Users/macbook/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.aspnet.cors/5.2.9/microsoft.aspnet.cors.5.2.9.nupkg.sha512",
