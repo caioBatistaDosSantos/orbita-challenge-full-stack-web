@@ -164,34 +164,34 @@
         class="elevation-1"
         :search="search"
       >
-                            <template v-slot:item.actions="{item}" >
-                              <v-btn
-                                class="ma-2"
-                                text
-                                icon
-                                color="blue lighten-2"
-                                @click="updateStudent(item)"
-                              >
-                                <v-icon
-                                  small
-                                >
-                                  mdi-pencil
-                                </v-icon>
-                              </v-btn>
-                              <v-btn
-                                class="ma-2"
-                                text
-                                icon
-                                color="red lighten-2"
-                                @click="selectStudent(item)"
-                              >
-                                <v-icon
-                                  small
-                                >
-                                  mdi-delete
-                                </v-icon>
-                              </v-btn>
-                            </template>
+        <template v-slot:item.actions="{item}" >
+          <v-btn
+            class="ma-2"
+            text
+            icon
+            color="blue lighten-2"
+            @click="updateStudent(item)"
+          >
+            <v-icon
+              small
+            >
+              mdi-pencil
+            </v-icon>
+          </v-btn>
+          <v-btn
+            class="ma-2"
+            text
+            icon
+            color="red lighten-2"
+            @click="selectStudent(item)"
+          >
+            <v-icon
+              small
+            >
+              mdi-delete
+            </v-icon>
+          </v-btn>
+        </template>
       </v-data-table>
     </section>
     <SidebarComponent titleView="Consulta de Alunos"/>
@@ -202,7 +202,6 @@
   import { validationMixin } from 'vuelidate'
   import { required, email, numeric, minLength, maxLength } from 'vuelidate/lib/validators'
   import SidebarComponent from '../components/SidebarComponent.vue'
-  // import DialogComponent from '../components/DialogComponent.vue'
   import { GetAll, Post, Put, Delete } from '../services/requestApi'
 
   export default {
@@ -217,7 +216,6 @@
 
     components: {
       SidebarComponent,
-      // DialogComponent,
     },
   
     mounted() {
